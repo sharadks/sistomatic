@@ -1,48 +1,136 @@
-<div class="row pt-1 mb-2">
-  <div class="col-md-3 text-center mb-2">
-    <h1 class="h5">
-      <i class="fas fa-laptop fa-lg mr-1 text-primary"></i>
-      {{ name }}
-      <i class="fas fa-mobile-alt fa-lg ml-1 mr-1 text-primary"></i>
-    </h1>
-  </div> 
-  <div class="col-md-3 text-center text-danger">
-    <h2 class="h5">
-      {{ angular }}<i class="fab fa-angular fa-lg ml-1 mr-1 text-danger"></i>
-    </h2>
+<div class="container">
+  <div class="row">
+    <p style="margin-left: 50%;">header</p>
   </div>
-  <div class="col-md-3 text-center text-primary">
-    <h2 class="h5">
-      {{ bootstrap }}<i class="fab fa-bootstrap fa-lg ml-1 mr-1 text-primary"></i>
-    </h2>
-  </div>
-  <div class="col-md-3 text-center text-success">
-    <h2 class="h5">
-      {{ fontawesome }}<i class="fab fa-font-awesome-flag fa-lg ml-1 mr-1 text-success"></i>
-    </h2>
-  </div>
-</div>
-<hr>
-<div class="row mb-1">
-  <div class="col-md-12 text-center">
-    <h3 class="h6">Features&nbsp;&nbsp;<i class="fas fa-list"></i></h3>
-  </div>
-</div>
-<div class="row pt-2 pb-4">
-  <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-4" *ngFor="let item of features">
-    <div class="card card-cascade">
-      <div class="card-img">
-        <a routerLink="/{{ item.link }}">
-          <img class="img-fluid card-img-top" src="./assets/params/images/demo/{{ item.image }}" alt="Card image cap">
-        </a>
+  <div class="row">
+
+
+    <div class="col">
+
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="billNo" class="text-primary font-weight-bold">Bill Number</label>
+        </div>
+
+
+        <div class="form-group col-md-4">
+          <input type="text" formControlName="billNo" [(ngModel)]="billNo"
+            class="text-primary form-control font-weight-bold" placeholder="" id="billNo">
+        </div>
+
       </div>
-      <div class="card-body pt-0">
-        <h4 class="h6 card-title">
-          <span style="font-size: 14px;"><strong>{{ item.description }}
-            </strong></span>
-        </h4>
+
+      <div class="row" style="margin-top: 5px;">
+        <div class="form-group col-md-4">
+          <label for="billPer" class="text-primary font-weight-bold">Bill %
+          </label>
+        </div>
+
+        <div class="form-group col-md-4">
+          <input type="text" formControlName="billPer" [(ngModel)]="billPer"
+            class="text-primary form-control font-weight-bold" placeholder="" id="billPer">
+        </div>
+
       </div>
+
+      <div class="row" style="margin-top: 5px;">
+        <div class="form-group col-md-4">
+          <button type="button" class="btn btn-primary" (click)="onSerch()">Search</button>
+        </div>
+
+      </div>
+
+
+
+      <div class="row" style="margin-top: 5px;">
+        <div class="card" style="width: 26rem;">
+          <div class="card-body">
+            <h5 class="card-title">Details</h5>
+
+            <div class="row" style="margin-top: 5px;">
+              <div class="form-group col-md-6">
+                <label for="partyName" class="text-primary font-weight-bold">Party Name</label>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input type="text" formControlName="partyName" [(ngModel)]="partyName"
+                  class="text-primary form-control font-weight-bold" placeholder="" id="partyName">
+              </div>
+
+            </div>
+
+            <div class="row" style="margin-top: 5px;">
+              <div class="form-group col-md-6">
+                <label for="nop" class="text-primary font-weight-bold">NOP</label>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input type="text" formControlName="nop" [(ngModel)]="nop"
+                  class="text-primary form-control font-weight-bold" placeholder="" id="nop">
+              </div>
+
+            </div>
+
+            <div class="row" style="margin-top: 5px;">
+              <div class="form-group col-md-6">
+                <label for="transport" class="text-primary font-weight-bold">Transport</label>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input type="text" formControlName="transport" [(ngModel)]="transport"
+                  class="text-primary form-control font-weight-bold" placeholder="" id="transport">
+              </div>
+
+            </div>
+
+            <div class="row" style="margin-top: 5px;">
+              <div class="form-group col-md-6">
+                <label for="ewaybillno" class="text-primary font-weight-bold">E-Way Bill Number</label>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input type="text" formControlName="ewaybillno" [(ngModel)]="ewaybillno"
+                  class="text-primary form-control font-weight-bold" placeholder="" id="ewaybillno">
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="col-sm">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sr. No</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">HSN</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Unit</th>
+            <th scope="col">Price</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items; let i = index">
+            <th>{{i+1}}</th>
+            <td>{{item.itemName}}</td>
+            <td>{{item.hsn}}</td>
+            <td>{{item.qty}}</td>
+            <td>{{item.unit}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.amount}}</td>
+          </tr>
+
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
-
