@@ -43,6 +43,14 @@ export class HomeComponent implements OnInit {
           unit: 'B',
           price: 'B',
           amount: 'B'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
         }
       ];
 
@@ -62,8 +70,8 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  onSerch = function (billNo, billPer) {
-      console.log('============================',billNo, billPer );
+  onSerch = function () {
+      console.log('============================');
   }
 
 }
