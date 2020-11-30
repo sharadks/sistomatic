@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   fontawesome = environment.application.fontawesome;
   items: any;
   billNo: any;
+  billDate:any;
   billPer: any;
   partyName: any;
   nop: any;
@@ -57,16 +58,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle('angular.ganatan: Une Application Web avec Angular');
+    this.titleService.setTitle('SISTOMATIC INTERIOR SOLUTIONS');
     this.meta.addTag({
       name: 'author',
-      content: 'danny ganatan'
+      content: 'Prashant Garg'
     });
     this.meta.updateTag(
       {
         name: 'description',
-        content: 'Cette application a été développée avec Angular version 11.0.2 et bootstrap 5.0.0' +
-          ' Elle applique le Routing, le Lazy loading, le Server side rendering et les Progressive Web App (PWA)'
+        content: 'Billing APp'
       });
   }
 

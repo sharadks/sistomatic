@@ -1,34 +1,44 @@
+<!-- Main Container -->
 <div class="container">
+
+  <!-- Heading -->
   <div class="row">
-    <p class="text-center">SISTOMATIC INTERIOR SOLUTIONS</p>
+    <p class="text-center h1">SISTOMATIC INTERIOR SOLUTIONS</p>
+    <hr>
   </div>
+  <!--  -->
   <div class="row">
     <div class="col">
 
-      
-<div class="row g-3">
-  <div class="col-md-6">
-    <label for="billNo" class="text-primary font-weight-bold">Bill Number</label>
-    <input type="text" formControlName="billNo" [(ngModel)]="billNo"
-            class="text-primary form-control font-weight-bold" placeholder="" id="billNo">
-  </div>
-  <div class="col-md-6">
-    <label for="billPer" class="text-primary font-weight-bold">Bill %</label>
-    <input type="text" formControlName="billPer" [(ngModel)]="billPer"
-            class="text-primary form-control font-weight-bold" placeholder="" id="billPer">
-  </div>
 
-  <div class="col-12">
-    <button type="button" class="btn btn-primary" (click)="onSerch()"><i class="fas fa-cogs"></i> Generate </button>
-  </div>
-</div>
-     
-       <!-- 
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="billNo" class="text-primary font-weight-bold">Bill Number</label>
+          <input type="text" formControlName="billNo" 
+            class="text-primary form-control font-weight-bold" placeholder="" id="billNo">
+        </div>
+        <div class="col-md-6">
+          <label for="billPer" class="text-primary font-weight-bold">Bill %</label>
+          <input type="text" formControlName="billPer"
+            class="text-primary form-control font-weight-bold" placeholder="" id="billPer">
+        </div>
+
+        <div class="col-12">
+          <button type="button" class="btn btn-primary" (click)="onSerch()"><i class="fas fa-cogs"></i> Generate
+          </button>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- 
       <div class="row">
+
+        
         <div class="form-group col-md-4">
           <label for="billNo" class="text-primary font-weight-bold">Bill Number</label>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
           <input type="text" formControlName="billNo" [(ngModel)]="billNo"
             class="text-primary form-control font-weight-bold" placeholder="" id="billNo">
         </div>
@@ -40,75 +50,81 @@
           </label>
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
           <input type="text" formControlName="billPer" [(ngModel)]="billPer"
             class="text-primary form-control font-weight-bold" placeholder="" id="billPer">
         </div>
-
       </div>
 
       <div class="row">
         <div class="form-group col-md-4">
-          <button type="button" class="btn btn-primary" (click)="onSerch()">Search</button>
+          <button type="button" class="btn btn-primary" (click)="onSerch()"><i class="fas fa-cogs"></i> Generate </button>
         </div>
-
       </div>
+      -->
+      
 
-      <div class="row mt-2">
-        <div class="card" style="width: 26rem;">
-          <div class="card-body">
-            <h5 class="card-title">Details</h5>
 
-            <div class="row" style="margin-top: 5px;">
-              <div class="form-group col-md-6">
-                <label for="partyName" class="text-primary font-weight-bold">Party Name</label>
-              </div>
+      <div class="row mt-2 mx-1">
+        <p class="h4">Details</p>
+        <div class="row" style="margin-top: 5px;">
+          <div class="form-group col-md-6">
+            <label for="partyName" class="text-primary font-weight-bold">Party Name</label>
+          </div>
 
-              <div class="form-group col-md-6">
-                <input type="text" formControlName="partyName" [(ngModel)]="partyName"
-                  class="text-primary form-control font-weight-bold" placeholder="" id="partyName">
-              </div>
-
-            </div>
-
-            <div class="row" style="margin-top: 5px;">
-              <div class="form-group col-md-6">
-                <label for="nop" class="text-primary font-weight-bold">NOP</label>
-              </div>
-
-              <div class="form-group col-md-6">
-                <input type="text" formControlName="nop" [(ngModel)]="nop"
-                  class="text-primary form-control font-weight-bold" placeholder="" id="nop">
-              </div>
-
-            </div>
-
-            <div class="row" style="margin-top: 5px;">
-              <div class="form-group col-md-6">
-                <label for="transport" class="text-primary font-weight-bold">Transport</label>
-              </div>
-
-              <div class="form-group col-md-6">
-                <input type="text" formControlName="transport" [(ngModel)]="transport"
-                  class="text-primary form-control font-weight-bold" placeholder="" id="transport">
-              </div>
-
-            </div>
-
-            <div class="row" style="margin-top: 5px;">
-              <div class="form-group col-md-6">
-                <label for="ewaybillno" class="text-primary font-weight-bold">E-Way Bill Number</label>
-              </div>
-
-              <div class="form-group col-md-6">
-                <input type="text" formControlName="ewaybillno" [(ngModel)]="ewaybillno"
-                  class="text-primary form-control font-weight-bold" placeholder="" id="ewaybillno">
-              </div>
-
-            </div>
-
+          <div class="form-group col-md-6">
+            <input type="text" disabled formControlName="partyName" 
+              class="text-primary form-control font-weight-bold" placeholder="" id="partyName">
           </div>
         </div>
+
+        <div class="row" style="margin-top: 5px;">
+          <div class="form-group col-md-6">
+            <label for="billDate" class="text-primary font-weight-bold">Bill Date</label>
+          </div>
+
+          <div class="form-group col-md-6">
+            <input type="text" disabled formControlName="billDate" 
+              class="text-primary form-control font-weight-bold" placeholder="" id="billDate">
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 5px;">
+          <div class="form-group col-md-6">
+            <label for="nop" class="text-primary font-weight-bold">NOP</label>
+          </div>
+
+          <div class="form-group col-md-6">
+            <input type="text" disabled formControlName="nop" 
+              class="text-primary form-control font-weight-bold" placeholder="" id="nop">
+          </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 5px;">
+          <div class="form-group col-md-6">
+            <label for="transport" class="text-primary font-weight-bold">Transport</label>
+          </div>
+
+          <div class="form-group col-md-6">
+            <input type="text" disabled formControlName="transport"
+              class="text-primary form-control font-weight-bold" placeholder="" id="transport">
+          </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 5px;">
+          <div class="form-group col-md-6">
+            <label for="ewaybillno" class="text-primary font-weight-bold">E-Way Bill Number</label>
+          </div>
+
+          <div class="form-group col-md-6">
+            <input type="text" disabled formControlName="ewaybillno" 
+              class="text-primary form-control font-weight-bold" placeholder="" id="ewaybillno">
+          </div>
+        </div>
+
+
       </div>
     </div>
 
@@ -141,16 +157,7 @@
         </table>
       </div>
       <div class="row mx-2">
-
-        <button>
-          Save
-        </button>
-
-
-        <button>
-          Print
-        </button>
-
+        <button type="button" class="btn btn-primary" (click)="onSerch()">Save</button>
       </div>
 
 
