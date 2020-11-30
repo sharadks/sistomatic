@@ -25,8 +25,7 @@ export class HomeComponent implements OnInit {
   constructor(
     private meta: Meta,
     private titleService: Title) {
-      this.billNo;
-      this.billPer;
+      
     this.items =
       [
         {
@@ -52,6 +51,190 @@ export class HomeComponent implements OnInit {
           unit: 'C',
           price: 'C',
           amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
+        },
+        {
+          itemName: 'C',
+          hsn: 'C',
+          qty: 'C',
+          unit: 'C',
+          price: 'C',
+          amount: 'C'
         }
       ];
 
@@ -66,7 +249,7 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag(
       {
         name: 'description',
-        content: 'Billing APp'
+        content: 'Billing APP'
       });
   }
 
